@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C10943DB25BEF365008DDE32 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10943DA25BEF365008DDE32 /* PresentationController.swift */; };
+		C10943E025BEF3A5008DDE32 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C10943DF25BEF3A5008DDE32 /* OverlayView.xib */; };
+		C10943E525BEF421008DDE32 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10943E425BEF421008DDE32 /* OverlayView.swift */; };
 		C112871C2545653200097CD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C112871B2545653200097CD3 /* AppDelegate.swift */; };
 		C112871E2545653200097CD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C112871D2545653200097CD3 /* SceneDelegate.swift */; };
-		C11287202545653200097CD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C112871F2545653200097CD3 /* ViewController.swift */; };
 		C11287232545653200097CD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11287212545653200097CD3 /* Main.storyboard */; };
 		C11287252545653600097CD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11287242545653600097CD3 /* Assets.xcassets */; };
 		C11287282545653600097CD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11287262545653600097CD3 /* LaunchScreen.storyboard */; };
 		C11287332545653600097CD3 /* Golf_Tracker_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11287322545653600097CD3 /* Golf_Tracker_AppTests.swift */; };
 		C112873E2545653600097CD3 /* Golf_Tracker_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C112873D2545653600097CD3 /* Golf_Tracker_AppUITests.swift */; };
+		C119B5EA25A0A366005A1940 /* New_Game_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C119B5E925A0A366005A1940 /* New_Game_View.swift */; };
+		C119B6B225A342EF005A1940 /* Course_Card_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C119B6B125A342EF005A1940 /* Course_Card_View.swift */; };
+		C14DC5D425C69D9D001B4DEE /* Result_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14DC5D325C69D9D001B4DEE /* Result_View.swift */; };
+		C1850B31256A52730032E101 /* Main_Page_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1850B30256A52730032E101 /* Main_Page_View.swift */; };
+		C1850B39256A57110032E101 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1850B38256A57110032E101 /* Navigation.swift */; };
+		C1850B3E256A57B30032E101 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1850B3D256A57B30032E101 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C10943DA25BEF365008DDE32 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		C10943DF25BEF3A5008DDE32 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		C10943E425BEF421008DDE32 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		C11287182545653200097CD3 /* Golf_Tracker_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Golf_Tracker_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C112871B2545653200097CD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C112871D2545653200097CD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C112871F2545653200097CD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C11287222545653200097CD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C11287242545653600097CD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C11287272545653600097CD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +59,12 @@
 		C11287392545653600097CD3 /* Golf_Tracker_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Golf_Tracker_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C112873D2545653600097CD3 /* Golf_Tracker_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Golf_Tracker_AppUITests.swift; sourceTree = "<group>"; };
 		C112873F2545653600097CD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C119B5E925A0A366005A1940 /* New_Game_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Game_View.swift; sourceTree = "<group>"; };
+		C119B6B125A342EF005A1940 /* Course_Card_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_Card_View.swift; sourceTree = "<group>"; };
+		C14DC5D325C69D9D001B4DEE /* Result_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result_View.swift; sourceTree = "<group>"; };
+		C1850B30256A52730032E101 /* Main_Page_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_Page_View.swift; sourceTree = "<group>"; };
+		C1850B38256A57110032E101 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		C1850B3D256A57B30032E101 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +115,18 @@
 		C112871A2545653200097CD3 /* Golf_Tracker_App */ = {
 			isa = PBXGroup;
 			children = (
+				C1850B3D256A57B30032E101 /* Model.swift */,
 				C112871B2545653200097CD3 /* AppDelegate.swift */,
 				C112871D2545653200097CD3 /* SceneDelegate.swift */,
-				C112871F2545653200097CD3 /* ViewController.swift */,
+				C1850B30256A52730032E101 /* Main_Page_View.swift */,
+				C119B5E925A0A366005A1940 /* New_Game_View.swift */,
+				C119B6B125A342EF005A1940 /* Course_Card_View.swift */,
+				C14DC5D325C69D9D001B4DEE /* Result_View.swift */,
+				C1850B38256A57110032E101 /* Navigation.swift */,
 				C11287212545653200097CD3 /* Main.storyboard */,
+				C10943DA25BEF365008DDE32 /* PresentationController.swift */,
+				C10943DF25BEF3A5008DDE32 /* OverlayView.xib */,
+				C10943E425BEF421008DDE32 /* OverlayView.swift */,
 				C11287242545653600097CD3 /* Assets.xcassets */,
 				C11287262545653600097CD3 /* LaunchScreen.storyboard */,
 				C11287292545653600097CD3 /* Info.plist */,
@@ -196,6 +220,7 @@
 				TargetAttributes = {
 					C11287172545653200097CD3 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1210;
 					};
 					C112872D2545653600097CD3 = {
 						CreatedOnToolsVersion = 11.6;
@@ -233,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C11287282545653600097CD3 /* LaunchScreen.storyboard in Resources */,
+				C10943E025BEF3A5008DDE32 /* OverlayView.xib in Resources */,
 				C11287252545653600097CD3 /* Assets.xcassets in Resources */,
 				C11287232545653200097CD3 /* Main.storyboard in Resources */,
 			);
@@ -259,9 +285,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C11287202545653200097CD3 /* ViewController.swift in Sources */,
+				C10943E525BEF421008DDE32 /* OverlayView.swift in Sources */,
+				C1850B3E256A57B30032E101 /* Model.swift in Sources */,
 				C112871C2545653200097CD3 /* AppDelegate.swift in Sources */,
 				C112871E2545653200097CD3 /* SceneDelegate.swift in Sources */,
+				C119B6B225A342EF005A1940 /* Course_Card_View.swift in Sources */,
+				C119B5EA25A0A366005A1940 /* New_Game_View.swift in Sources */,
+				C1850B31256A52730032E101 /* Main_Page_View.swift in Sources */,
+				C14DC5D425C69D9D001B4DEE /* Result_View.swift in Sources */,
+				C1850B39256A57110032E101 /* Navigation.swift in Sources */,
+				C10943DB25BEF365008DDE32 /* PresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,14 +467,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Golf_Tracker_App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Simon.Golf-Tracker-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,8 +487,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Golf_Tracker_App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
