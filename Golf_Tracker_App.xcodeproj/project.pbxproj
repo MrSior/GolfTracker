@@ -20,9 +20,12 @@
 		C119B5EA25A0A366005A1940 /* New_Game_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C119B5E925A0A366005A1940 /* New_Game_View.swift */; };
 		C119B6B225A342EF005A1940 /* Course_Card_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C119B6B125A342EF005A1940 /* Course_Card_View.swift */; };
 		C14DC5D425C69D9D001B4DEE /* Result_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14DC5D325C69D9D001B4DEE /* Result_View.swift */; };
+		C16D2C6225E18BDC00D48B99 /* Prev_Game_Course_Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16D2C6125E18BDC00D48B99 /* Prev_Game_Course_Card.swift */; };
 		C1850B31256A52730032E101 /* Main_Page_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1850B30256A52730032E101 /* Main_Page_View.swift */; };
 		C1850B39256A57110032E101 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1850B38256A57110032E101 /* Navigation.swift */; };
 		C1850B3E256A57B30032E101 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1850B3D256A57B30032E101 /* Model.swift */; };
+		C1BCBD0025E2AB03000FAF14 /* Prev_Game_Results_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BCBCFF25E2AB03000FAF14 /* Prev_Game_Results_View.swift */; };
+		C1D1AF5D25E133890008AE08 /* Previous_Games_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D1AF5C25E133890008AE08 /* Previous_Games_View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +65,12 @@
 		C119B5E925A0A366005A1940 /* New_Game_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Game_View.swift; sourceTree = "<group>"; };
 		C119B6B125A342EF005A1940 /* Course_Card_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_Card_View.swift; sourceTree = "<group>"; };
 		C14DC5D325C69D9D001B4DEE /* Result_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result_View.swift; sourceTree = "<group>"; };
+		C16D2C6125E18BDC00D48B99 /* Prev_Game_Course_Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prev_Game_Course_Card.swift; sourceTree = "<group>"; };
 		C1850B30256A52730032E101 /* Main_Page_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_Page_View.swift; sourceTree = "<group>"; };
 		C1850B38256A57110032E101 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		C1850B3D256A57B30032E101 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C1BCBCFF25E2AB03000FAF14 /* Prev_Game_Results_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prev_Game_Results_View.swift; sourceTree = "<group>"; };
+		C1D1AF5C25E133890008AE08 /* Previous_Games_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previous_Games_View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,9 @@
 				C119B5E925A0A366005A1940 /* New_Game_View.swift */,
 				C119B6B125A342EF005A1940 /* Course_Card_View.swift */,
 				C14DC5D325C69D9D001B4DEE /* Result_View.swift */,
+				C1D1AF5C25E133890008AE08 /* Previous_Games_View.swift */,
+				C16D2C6125E18BDC00D48B99 /* Prev_Game_Course_Card.swift */,
+				C1BCBCFF25E2AB03000FAF14 /* Prev_Game_Results_View.swift */,
 				C1850B38256A57110032E101 /* Navigation.swift */,
 				C11287212545653200097CD3 /* Main.storyboard */,
 				C10943DA25BEF365008DDE32 /* PresentationController.swift */,
@@ -290,7 +299,10 @@
 				C112871C2545653200097CD3 /* AppDelegate.swift in Sources */,
 				C112871E2545653200097CD3 /* SceneDelegate.swift in Sources */,
 				C119B6B225A342EF005A1940 /* Course_Card_View.swift in Sources */,
+				C16D2C6225E18BDC00D48B99 /* Prev_Game_Course_Card.swift in Sources */,
 				C119B5EA25A0A366005A1940 /* New_Game_View.swift in Sources */,
+				C1D1AF5D25E133890008AE08 /* Previous_Games_View.swift in Sources */,
+				C1BCBD0025E2AB03000FAF14 /* Prev_Game_Results_View.swift in Sources */,
 				C1850B31256A52730032E101 /* Main_Page_View.swift in Sources */,
 				C14DC5D425C69D9D001B4DEE /* Result_View.swift in Sources */,
 				C1850B39256A57110032E101 /* Navigation.swift in Sources */,

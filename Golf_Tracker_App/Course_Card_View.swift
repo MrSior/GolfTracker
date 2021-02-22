@@ -124,7 +124,10 @@ class Course_Card_View: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.setHidesBackButton(true, animated: true)
+        //self.navigationItem.backButtonTitle = "Back"
+        
         //let holeLables:Labeles = Labeles()
         for i in 0...17 {
             holeLables.par[i].text = String(Current_game.Holes[i].par)
@@ -276,6 +279,12 @@ class Course_Card_View: UIViewController {
     
     @IBAction func doneTapped(_ sender: Any) {
         performSegue(withIdentifier: "toResultSegue", sender: nil)
+    }
+    
+    @IBAction func deleteCurrentGameTapped(_ sender: Any) {
+        Current_game = Course()
+        saveData()
+        self.performSegue(withIdentifier: "unwindFromCourseToMainPage", sender: self)
     }
     
     

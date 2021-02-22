@@ -44,6 +44,10 @@ class Result_View: UIViewController {
         let points = CalculatingPoints()
         pointsLabel.text = String(points)
         
+        if shotsSum < Best_score {
+            Best_score = shotsSum;
+        }
+        
         if shotsSum < 72 {
             resShotsLabel.text = String(shotsSum - 72)
         } else if shotsSum >= 72{
@@ -190,10 +194,10 @@ class Result_View: UIViewController {
     
     @IBAction func doneTapped(_ sender: Any) {
         if isComplete() {
-            Games.append(Current_game)
+            //Games.append(Current_game)
+            NewGame(game: Current_game);
+            saveData();
             self.performSegue(withIdentifier: "unwindToMainPage", sender: self)
-//            reloadInputViews()
-//            navigationController?.popToRootViewController(animated: true)
         } else{
             let alert =  UIAlertController(title: "Incomplete From", message: "Please fill out all information about holes", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

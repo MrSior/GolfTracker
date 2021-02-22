@@ -26,6 +26,7 @@ class New_Game_View: UIViewController {
             Current_game.name = Name_TextField.text!
             Current_game.field_name = Golf_Course_name_TextField.text!
             Current_game.handicap_points = Int(Handicap_Points_TextField.text!)!
+            saveData()
             performSegue(withIdentifier: "toCourseCardSegue", sender: nil)
         }
     }

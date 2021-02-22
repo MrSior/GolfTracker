@@ -40,7 +40,7 @@ class OverlayView: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
                       ["1", "2", "3", "4", "5", "6", "7", "8"],
                       ["+", "-"],
                       [str, str1, str2],
-                      ["+", "_"]]
+                      ["+", "-"]]
     }
     
     override func viewDidLayoutSubviews() {

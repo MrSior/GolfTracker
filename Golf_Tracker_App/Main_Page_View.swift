@@ -18,8 +18,16 @@ class Main_Page_View: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bestScoreLabel.textColor = UIColor(red: 35, green: 52, blue: 67, alpha: 1);
-        bestScoreLabel.text = String(Best_score)
+        if Best_score == 100000 {
+            bestScoreLabel.text = ""
+        } else{
+            let scr:Int = Best_score - 72;
+            if scr < 0 {
+                bestScoreLabel.text = String(scr)
+            } else{
+                bestScoreLabel.text = String("+" + String(scr))
+            }
+        }
         if isTrainRange {
             isTrainLabel.text = "•Range"
             if isTrainChip {

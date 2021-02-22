@@ -9,14 +9,14 @@
 import Foundation
 
 var HCP_of_player:Int = 0;
-var Best_score:Int = 0;
+var Best_score:Int = 100000;
 var whatTrain:String = ""
 var isTrainRange:Bool = false;
 var isTrainChip:Bool = false;
 var isTrainPut:Bool = false;
 
 
-struct Hole{
+struct Hole : Codable{   //добавил codable
     var par:Int = 0;
     var HCP:Int = 0;
     var shots:Int = 0;
@@ -35,7 +35,7 @@ struct Hole{
     }
 }
 
-struct Course{
+struct Course : Codable{    //добавил codable
     var name:String = ""
     var field_name:String = ""
     var handicap_points:Int = 0
@@ -57,8 +57,7 @@ struct Course{
         Holes = [Hole](repeating: Hole.init(par: 0 , HCP: 0, shots: 0), count: 18)
     }
 }
-
-var Games:[Course] = [];
+var Games:[Course] = []
 var Current_game:Course = Course()
 var currentHole:Int = 0;
 
@@ -70,4 +69,47 @@ func RemoveGame(index:Int){
     Games.remove(at: index);
 }
 
+func saveData(){
+    let arr:[Course] = Games
+    if let data = try? PropertyListEncoder().encode(arr) {
+        UserDefaults.standard.set(data, forKey: "GamesData")
+    }
+    
+    UserDefaults.standard.set(isTrainRange, forKey: "isTrainRangeData");
+    UserDefaults.standard.set(isTrainChip, forKey: "isTrainChipData");
+    UserDefaults.standard.set(isTrainPut, forKey: "isTrainPutData");
+    UserDefaults.standard.set(Best_score, forKey: "bestScoreData");
+    //UserDefaults.standard.set(Current_game, forKey: "Current_gameData");
+    UserDefaults.standard.synchronize();
+}
+
+func loadData(){
+    
+    let defaults = UserDefaults.standard
+    if let data = defaults.data(forKey: "GamesData") {
+        Games =  try! PropertyListDecoder().decode([Course].self, from: data)
+    }
+    let a:Bool? = UserDefaults.standard.bool(forKey: "isTrainRangeData")
+    if a != nil {
+        isTrainRange = a!;
+    }
+    let b:Bool? = UserDefaults.standard.bool(forKey: "isTrainChipData")
+    if b != nil {
+        isTrainChip = b!;
+    }
+    let c:Bool? = UserDefaults.standard.bool(forKey: "isTrainPutData")
+    if c != nil {
+        isTrainPut = c!;
+    }
+    let scr:Int? = UserDefaults.standard.integer(forKey: "bestScoreData")
+    if scr != nil && scr != 0{
+        Best_score = scr!;
+    }
+//    if let arr = UserDefaults.standard.array(forKey: "GamesData") as? [Course] {
+//        Games = arr;
+//    } else{
+//        let game:[Course] = []
+//        Games = game;
+//    }
+}
 
