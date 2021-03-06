@@ -36,11 +36,53 @@ class OverlayView: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         var str2:String = String(s);
         pickerData = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"],
                       ["3", "4", "5"],
-                      ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
-                      ["1", "2", "3", "4", "5", "6", "7", "8"],
-                      ["+", "-"],
-                      [str, str1, str2],
-                      ["+", "-"]]
+                      [" ", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+                      [" ", "1", "2", "3", "4", "5", "6", "7", "8"],
+                      [" ", "+", "-"],
+                      [" ", str, str1, str2],
+                      [" ", "+", "-"]]
+        
+        picker.selectRow(Current_game.Holes[currentHole].HCP - 1, inComponent: 0, animated: true)
+        isChanged[currentHole][0] = true;
+        picker.selectRow(Current_game.Holes[currentHole].par - 3, inComponent: 1, animated: true)
+        isChanged[currentHole][1] = true;
+        
+        if isChanged[currentHole][2] {
+            picker.selectRow(Current_game.Holes[currentHole].shots, inComponent: 2, animated: true)
+        }
+        
+        if isChanged[currentHole][3] {
+            picker.selectRow(Current_game.Holes[currentHole].puts, inComponent: 3, animated: true)
+        }
+        
+        if isChanged[currentHole][4] {
+            if Current_game.Holes[currentHole].UpDown {
+                picker.selectRow(1, inComponent: 4, animated: true)
+            } else{
+                picker.selectRow(2, inComponent: 4, animated: true)
+            }
+        }
+        
+        if isChanged[currentHole][5] {
+            if Current_game.Holes[currentHole].exit == 1 {
+                picker.selectRow(1, inComponent: 5, animated: true)
+            }
+            if Current_game.Holes[currentHole].exit == 2 {
+                picker.selectRow(2, inComponent: 5, animated: true)
+            }
+            if Current_game.Holes[currentHole].exit == 3 {
+                picker.selectRow(3, inComponent: 5, animated: true)
+            }
+        }
+        
+        
+        if isChanged[currentHole][6] {
+            if Current_game.Holes[currentHole].greenReg {
+                picker.selectRow(1, inComponent: 6, animated: true)
+            } else{
+                picker.selectRow(2, inComponent: 6, animated: true)
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -68,6 +110,22 @@ class OverlayView: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
                     self.view.frame.origin = self.pointOrigin ?? CGPoint(x: 0, y: 400)
                 }
             }
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
+        let labelWidth = picker.frame.width / CGFloat(picker.numberOfComponents)
+        let labelTexts = ["HCP", "Par", "Shots", "Puts", "U.d.", "Exit", "Gr.r."]
+
+        for index in 0..<labelTexts.count {
+            let label: UILabel = UILabel(frame: CGRect(x: picker.frame.origin.x + labelWidth * CGFloat(index), y: 40, width: labelWidth, height: 20))
+            label.text = labelTexts[index]
+            label.textAlignment = .center
+            label.textColor = UIColor.black
+            label.font = UIFont.systemFont(ofSize: 20.0)
+            //picker.addSubview(label)
+            self.view.addSubview(label);
         }
     }
     
@@ -100,52 +158,67 @@ class OverlayView: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
             holeLables.par[currentHole].text = String(row + 3)
         }
         if component == 2 {
-            Current_game.Holes[currentHole].shots = row + 1;
-            holeLables.shots[currentHole].text = String(row + 1)
+            if row != 0 {
+                isChanged[currentHole][2] = true;
+                Current_game.Holes[currentHole].shots = row;
+                holeLables.shots[currentHole].text = String(row)
+            }
         }
         if component == 3 {
-            Current_game.Holes[currentHole].puts = row + 1;
-            holeLables.puts[currentHole].text = String(row + 1)
+            if row != 0 {
+                isChanged[currentHole][3] = true;
+                Current_game.Holes[currentHole].puts = row;
+                holeLables.puts[currentHole].text = String(row)
+            }
         }
         if component == 4 {
-            var b:Bool;
-            var s:String;
-            if pickerData[component][row] == "+" {
-                b = true
-                s = "+"
-            } else {
-                b = false
-                s = "-"
+            if row != 0{
+                isChanged[currentHole][4] = true;
+                var b:Bool;
+                var s:String;
+                if pickerData[component][row] == "+" {
+                    b = true
+                    s = "+"
+                } else {
+                    b = false
+                    s = "-"
+                }
+                Current_game.Holes[currentHole].UpDown = b;
+                holeLables.upDowns[currentHole].text = s
             }
-            Current_game.Holes[currentHole].UpDown = b;
-            holeLables.upDowns[currentHole].text = s
         }
         if component == 5 {
-            var s:String = ""
-            if row == 0 {
-                s = "↑"
+            if row != 0 {
+                isChanged[currentHole][5] = true;
+                var s:String = ""
+                if row == 1 {
+                    s = "↑"
+                }
+                else if row == 2 {
+                    s = "←"
+                }
+                else if row == 3 {
+                    s = "→"
+                }
+                Current_game.Holes[currentHole].exit = row;
+                holeLables.exit[currentHole].text = s
             }
-            else if row == 1 {
-                s = "←"
-            }
-            else if row == 2 {
-                s = "→"
-            }
-            Current_game.Holes[currentHole].exit = row + 1;
-            holeLables.exit[currentHole].text = s
         }
         if component == 6 {
-            var b:Bool;
-            var s:String;
-            if pickerData[component][row] == "+" {
-                b = true
-                s = "+"
-            } else {
-                b = false
-                s = "-"
+            if row != 0 {
+                isChanged[currentHole][6] = true;
+                var b:Bool;
+                var s:String;
+                if pickerData[component][row] == "+" {
+                    b = true
+                    s = "+"
+                } else {
+                    b = false
+                    s = "-"
+                }
+                Current_game.Holes[currentHole].greenReg = b;
+                holeLables.greenReg[currentHole].text = s
             }
-            Current_game.Holes[currentHole].greenReg = b;
-            holeLables.greenReg[currentHole].text = s
         }
     }
 }

@@ -15,7 +15,6 @@ var isTrainRange:Bool = false;
 var isTrainChip:Bool = false;
 var isTrainPut:Bool = false;
 
-
 struct Hole : Codable{   //добавил codable
     var par:Int = 0;
     var HCP:Int = 0;
@@ -60,6 +59,8 @@ struct Course : Codable{    //добавил codable
 var Games:[Course] = []
 var Current_game:Course = Course()
 var currentHole:Int = 0;
+
+var isChanged = Array(repeating: Array(repeating: false, count: 7), count: 18); // добавил сегодня
 
 func NewGame(game:Course){
     Games.append(game);

@@ -51,16 +51,18 @@ class Prev_Game_Results_View: UIViewController {
             shotsResLabel.text = "+" + String(shotsSum - 72)
         }
         if points >= 33 {
-            shotsResLabel.textColor = UIColor.green
+            shotsResLabel.textColor = UIColor.systemGreen
             pointsResLabel.text = "Ok";
-            pointsResLabel.textColor = UIColor.green
+            pointsResLabel.textColor = UIColor.systemGreen
+            HCPresLabel.text = "⏤";
+            HCPresLabel.textColor = UIColor.systemGreen
             if points > 36 {
-                HCPresLabel.text = "↑";
-                HCPresLabel.textColor = UIColor.green
+                HCPresLabel.text = "↓";
+                HCPresLabel.textColor = UIColor.systemGreen
             }
         } else{
             shotsResLabel.textColor = UIColor.red
-            HCPresLabel.text = "↓";
+            HCPresLabel.text = "↑";
             HCPresLabel.textColor = UIColor.red
             pointsResLabel.text = "Bad";
             pointsResLabel.textColor = UIColor.red
@@ -71,26 +73,50 @@ class Prev_Game_Results_View: UIViewController {
             putsResLabel.textColor = UIColor.red
         } else{
             putsResLabel.text = "Ok"
-            putsResLabel.textColor = UIColor.green
+            putsResLabel.textColor = UIColor.systemGreen
         }
         
-        if greenRegSum + upDownsSum < 18 {
+        if greenRegSum == 18 - prevGameInfo.handicap_points{
+            greenRegResLabel.text = "Ok"
+            greenRegResLabel.textColor = UIColor.systemGreen
+        } else if greenRegSum > 18 - prevGameInfo.handicap_points{
+            greenRegResLabel.text = "Good"
+            greenRegResLabel.textColor = UIColor.systemGreen
+        } else{
             greenRegResLabel.text = "Bad"
             greenRegResLabel.textColor = UIColor.red
+        }
+        
+        if upDownsSum == 18 - prevGameInfo.handicap_points{
+            upDownsResLabel.text = "Ok"
+            upDownsResLabel.textColor = UIColor.systemGreen
+        } else if upDownsSum > 18 - prevGameInfo.handicap_points{
+            upDownsResLabel.text = "Good"
+            upDownsResLabel.textColor = UIColor.systemGreen
+        } else{
             upDownsResLabel.text = "Bad"
             upDownsResLabel.textColor = UIColor.red
-        } else{
-            greenRegResLabel.text = "Ok"
-            greenRegResLabel.textColor = UIColor.green
-            upDownsResLabel.text = "Ok"
-            upDownsResLabel.textColor = UIColor.green
         }
+        
+        
+//        if greenRegSum + upDownsSum < 18 {
+//            greenRegResLabel.text = "Bad"
+//            greenRegResLabel.textColor = UIColor.red
+//            upDownsResLabel.text = "Bad"
+//            upDownsResLabel.textColor = UIColor.red
+//        } else{
+//            greenRegResLabel.text = "Ok"
+//            greenRegResLabel.textColor = UIColor.green
+//            upDownsResLabel.text = "Ok"
+//            upDownsResLabel.textColor = UIColor.green
+//        }
+        
         if exitsSum < 17 {
             exitsResLabel.text = "Bad"
             exitsResLabel.textColor = UIColor.red
         } else{
             exitsResLabel.text = "Ok"
-            exitsResLabel.textColor = UIColor.green
+            exitsResLabel.textColor = UIColor.systemGreen
         }
         
         // Do any additional setup after loading the view.

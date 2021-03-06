@@ -283,6 +283,7 @@ class Course_Card_View: UIViewController {
     
     @IBAction func deleteCurrentGameTapped(_ sender: Any) {
         Current_game = Course()
+        isChanged = Array(repeating: Array(repeating: false, count: 7), count: 18);
         saveData()
         self.performSegue(withIdentifier: "unwindFromCourseToMainPage", sender: self)
     }

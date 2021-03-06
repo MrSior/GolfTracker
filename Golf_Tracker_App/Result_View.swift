@@ -28,12 +28,12 @@ class Result_View: UIViewController {
     @IBOutlet weak var resHCPLabel: UILabel!
     
     
-
+    var shotsSum = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationItem.setHidesBackButton(true, animated: true)
-        var shotsSum = 0, putsSum = 0, upDownsSum = 0, greenRegSum = 0, exitsSum = 0;
+        var putsSum = 0, upDownsSum = 0, greenRegSum = 0, exitsSum = 0;
         Sum(shots: &shotsSum, puts: &putsSum, upDowns: &upDownsSum, greenReg: &greenRegSum, exits: &exitsSum)
         shotsLabel.text = String(shotsSum)
         shotsLabel.textAlignment = .left
@@ -44,9 +44,9 @@ class Result_View: UIViewController {
         let points = CalculatingPoints()
         pointsLabel.text = String(points)
         
-        if shotsSum < Best_score {
-            Best_score = shotsSum;
-        }
+//        if shotsSum < Best_score {
+//            Best_score = shotsSum;
+//        }
         
         if shotsSum < 72 {
             resShotsLabel.text = String(shotsSum - 72)
@@ -57,13 +57,15 @@ class Result_View: UIViewController {
             resShotsLabel.textColor = UIColor.green
             resPointLabel.text = "Ok";
             resPointLabel.textColor = UIColor.green
+            resHCPLabel.text = "⏤";
+            resHCPLabel.textColor = UIColor.green
             if points > 36 {
-                resHCPLabel.text = "↑";
+                resHCPLabel.text = "↓";
                 resHCPLabel.textColor = UIColor.green
             }
         } else{
             resShotsLabel.textColor = UIColor.red
-            resHCPLabel.text = "↓";
+            resHCPLabel.text = "↑";
             resHCPLabel.textColor = UIColor.red
             resPointLabel.text = "Bad";
             resPointLabel.textColor = UIColor.red
@@ -77,17 +79,41 @@ class Result_View: UIViewController {
             resPutsLabel.textColor = UIColor.green
         }
         
-        if greenRegSum + upDownsSum < 18 {
+        if greenRegSum == 18 - Current_game.handicap_points{
+            resGreenRegLabel.text = "Ok"
+            resGreenRegLabel.textColor = UIColor.systemGreen
+        } else if greenRegSum > 18 - Current_game.handicap_points{
+            resGreenRegLabel.text = "Good"
+            resGreenRegLabel.textColor = UIColor.systemGreen
+        } else{
             resGreenRegLabel.text = "Bad"
             resGreenRegLabel.textColor = UIColor.red
+        }
+        
+        if upDownsSum == 18 - Current_game.handicap_points{
+            resUpDownsLabel.text = "Ok"
+            resUpDownsLabel.textColor = UIColor.systemGreen
+        } else if upDownsSum > 18 - Current_game.handicap_points{
+            resUpDownsLabel.text = "Good"
+            resUpDownsLabel.textColor = UIColor.systemGreen
+        } else{
             resUpDownsLabel.text = "Bad"
             resUpDownsLabel.textColor = UIColor.red
-        } else{
-            resGreenRegLabel.text = "Ok"
-            resGreenRegLabel.textColor = UIColor.green
-            resUpDownsLabel.text = "Ok"
-            resUpDownsLabel.textColor = UIColor.green
         }
+        
+        
+//        if greenRegSum + upDownsSum < 18 {
+//            resGreenRegLabel.text = "Bad"
+//            resGreenRegLabel.textColor = UIColor.red
+//            resUpDownsLabel.text = "Bad"
+//            resUpDownsLabel.textColor = UIColor.red
+//        } else{
+//            resGreenRegLabel.text = "Ok"
+//            resGreenRegLabel.textColor = UIColor.green
+//            resUpDownsLabel.text = "Ok"
+//            resUpDownsLabel.textColor = UIColor.green
+//        }
+        
         if exitsSum < 17 {
             resExitsLabel.text = "Bad"
             resExitsLabel.textColor = UIColor.red
@@ -96,16 +122,42 @@ class Result_View: UIViewController {
             resExitsLabel.textColor = UIColor.green
         }
         
+        if isComplete(){
+            if exitsSum < 17 || greenRegSum < 18 - Current_game.handicap_points {
+                isTrainRange = true;
+            }
+            if upDownsSum < 18 - Current_game.handicap_points{
+                isTrainChip = true;
+            }
+            if putsSum > 36 {
+                isTrainPut = true;
+            }
+            resShotsLabel.isHidden = false;
+            resPutsLabel.isHidden = false;
+            resUpDownsLabel.isHidden = false;
+            resExitsLabel.isHidden = false;
+            resGreenRegLabel.isHidden = false;
+            resHCPLabel.isHidden = false;
+            resPointLabel.isHidden = false;
+        } else{
+            resShotsLabel.isHidden = true;
+            resPutsLabel.isHidden = true;
+            resUpDownsLabel.isHidden = true;
+            resExitsLabel.isHidden = true;
+            resGreenRegLabel.isHidden = true;
+            resHCPLabel.isHidden = true;
+            resPointLabel.isHidden = true;
+        }
         
-        if exitsSum < 17 {
-            isTrainRange = true;
-        }
-        if greenRegSum + upDownsSum != 18{
-            isTrainChip = true;
-        }
-        if putsSum >= 36 {
-            isTrainPut = true;
-        }
+//        if exitsSum < 17 || greenRegSum < 18 - Current_game.handicap_points {
+//            isTrainRange = true;
+//        }
+//        if upDownsSum < 18 - Current_game.handicap_points{
+//            isTrainChip = true;
+//        }
+//        if putsSum > 36 {
+//            isTrainPut = true;
+//        }
     }
     
     func Sum(shots: inout Int, puts: inout Int, upDowns: inout Int, greenReg: inout Int, exits: inout Int){
@@ -195,7 +247,11 @@ class Result_View: UIViewController {
     @IBAction func doneTapped(_ sender: Any) {
         if isComplete() {
             //Games.append(Current_game)
+            if shotsSum < Best_score {
+                Best_score = shotsSum;
+            }
             NewGame(game: Current_game);
+            isChanged = Array(repeating: Array(repeating: false, count: 7), count: 18);
             saveData();
             self.performSegue(withIdentifier: "unwindToMainPage", sender: self)
         } else{

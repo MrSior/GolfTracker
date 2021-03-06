@@ -18,6 +18,7 @@ class Main_Page_View: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        isChanged = Array(repeating: Array(repeating: false, count: 7), count: 18);
         if Best_score == 100000 {
             bestScoreLabel.text = ""
         } else{
