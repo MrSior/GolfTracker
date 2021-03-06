@@ -54,14 +54,14 @@ class Result_View: UIViewController {
             resShotsLabel.text = "+" + String(shotsSum - 72)
         }
         if points >= 33 {
-            resShotsLabel.textColor = UIColor.green
+            resShotsLabel.textColor = UIColor.systemGreen
             resPointLabel.text = "Ok";
-            resPointLabel.textColor = UIColor.green
+            resPointLabel.textColor = UIColor.systemGreen
             resHCPLabel.text = "⏤";
-            resHCPLabel.textColor = UIColor.green
+            resHCPLabel.textColor = UIColor.systemGreen
             if points > 36 {
                 resHCPLabel.text = "↓";
-                resHCPLabel.textColor = UIColor.green
+                resHCPLabel.textColor = UIColor.systemGreen
             }
         } else{
             resShotsLabel.textColor = UIColor.red
@@ -76,7 +76,7 @@ class Result_View: UIViewController {
             resPutsLabel.textColor = UIColor.red
         } else{
             resPutsLabel.text = "Ok"
-            resPutsLabel.textColor = UIColor.green
+            resPutsLabel.textColor = UIColor.systemGreen
         }
         
         if greenRegSum == 18 - Current_game.handicap_points{
@@ -119,7 +119,7 @@ class Result_View: UIViewController {
             resExitsLabel.textColor = UIColor.red
         } else{
             resExitsLabel.text = "Ok"
-            resExitsLabel.textColor = UIColor.green
+            resExitsLabel.textColor = UIColor.systemGreen
         }
         
         if isComplete(){
