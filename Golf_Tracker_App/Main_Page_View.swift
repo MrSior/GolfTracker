@@ -19,16 +19,36 @@ class Main_Page_View: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         isChanged = Array(repeating: Array(repeating: false, count: 7), count: 18);
-        if Best_score == 100000 {
+        if Games.count == 0{
             bestScoreLabel.text = ""
         } else{
-            let scr:Int = Best_score - 72;
+            var min = 1000000000
+            for game in Games {
+                var sum = 0
+                for i in game.Holes {
+                    sum += i.shots
+                }
+                if sum < min {
+                    min = sum
+                }
+            }
+            let scr = min - 72
             if scr < 0 {
                 bestScoreLabel.text = String(scr)
             } else{
                 bestScoreLabel.text = String("+" + String(scr))
             }
         }
+//        if Best_score == 100000 {
+//            bestScoreLabel.text = ""
+//        } else{
+//            let scr:Int = Best_score - 72;
+//            if scr < 0 {
+//                bestScoreLabel.text = String(scr)
+//            } else{
+//                bestScoreLabel.text = String("+" + String(scr))
+//            }
+//        }
         if isTrainRange {
             isTrainLabel.text = "•Range"
             if isTrainChip {
