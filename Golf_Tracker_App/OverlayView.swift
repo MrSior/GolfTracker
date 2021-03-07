@@ -18,6 +18,14 @@ class OverlayView: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     @IBOutlet weak var slideIndicator: UIView!
     @IBOutlet weak var picker: UIPickerView!
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+            // Trait collection has already changed
+    }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        // Trait collection will change. Use this one so you know what the state is changing to.
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
@@ -122,7 +130,11 @@ class OverlayView: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
             let label: UILabel = UILabel(frame: CGRect(x: picker.frame.origin.x + labelWidth * CGFloat(index), y: 40, width: labelWidth, height: 20))
             label.text = labelTexts[index]
             label.textAlignment = .center
-            label.textColor = UIColor.black
+            if self.traitCollection.userInterfaceStyle == .dark{
+                label.textColor = UIColor.white
+            } else{
+                label.textColor = UIColor.black
+            }
             label.font = UIFont.systemFont(ofSize: 20.0)
             //picker.addSubview(label)
             self.view.addSubview(label);

@@ -52,13 +52,15 @@ class Prev_Game_Results_View: UIViewController {
         }
         if points >= 33 {
             shotsResLabel.textColor = UIColor.systemGreen
-            pointsResLabel.text = "Ok";
-            pointsResLabel.textColor = UIColor.systemGreen
+            pointsResLabel.text = "OK";
+            pointsResLabel.textColor = UIColor.systemYellow
             HCPresLabel.text = "⏤";
             HCPresLabel.textColor = UIColor.systemGreen
             if points > 36 {
                 HCPresLabel.text = "↓";
                 HCPresLabel.textColor = UIColor.systemGreen
+                pointsResLabel.text = "Good";
+                pointsResLabel.textColor = UIColor.systemGreen
             }
         } else{
             shotsResLabel.textColor = UIColor.red
@@ -72,13 +74,13 @@ class Prev_Game_Results_View: UIViewController {
             putsResLabel.text = "Bad"
             putsResLabel.textColor = UIColor.red
         } else{
-            putsResLabel.text = "Ok"
+            putsResLabel.text = "Good"
             putsResLabel.textColor = UIColor.systemGreen
         }
         
         if greenRegSum == 18 - prevGameInfo.handicap_points{
-            greenRegResLabel.text = "Ok"
-            greenRegResLabel.textColor = UIColor.systemGreen
+            greenRegResLabel.text = "OK"
+            greenRegResLabel.textColor = UIColor.systemYellow
         } else if greenRegSum > 18 - prevGameInfo.handicap_points{
             greenRegResLabel.text = "Good"
             greenRegResLabel.textColor = UIColor.systemGreen
@@ -88,8 +90,8 @@ class Prev_Game_Results_View: UIViewController {
         }
         
         if upDownsSum == 18 - prevGameInfo.handicap_points{
-            upDownsResLabel.text = "Ok"
-            upDownsResLabel.textColor = UIColor.systemGreen
+            upDownsResLabel.text = "OK"
+            upDownsResLabel.textColor = UIColor.systemYellow
         } else if upDownsSum > 18 - prevGameInfo.handicap_points{
             upDownsResLabel.text = "Good"
             upDownsResLabel.textColor = UIColor.systemGreen
@@ -115,7 +117,7 @@ class Prev_Game_Results_View: UIViewController {
             exitsResLabel.text = "Bad"
             exitsResLabel.textColor = UIColor.red
         } else{
-            exitsResLabel.text = "Ok"
+            exitsResLabel.text = "Good"
             exitsResLabel.textColor = UIColor.systemGreen
         }
         

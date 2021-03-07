@@ -11,9 +11,84 @@ import UIKit
 var holeLabelsOfPrevGame:Labeles = Labeles()
 
 class Prev_Game_Course_Card: UIViewController {
-
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+            // Trait collection has already changed
+    }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        // Trait collection will change. Use this one so you know what the state is changing to.
+    }
+    
+    @IBOutlet weak var HoleButton1: UIButton!
+    @IBOutlet weak var HoleButton2: UIButton!
+    @IBOutlet weak var HoleButton3: UIButton!
+    @IBOutlet weak var HoleButton4: UIButton!
+    @IBOutlet weak var HoleButton5: UIButton!
+    @IBOutlet weak var HoleButton6: UIButton!
+    @IBOutlet weak var HoleButton7: UIButton!
+    @IBOutlet weak var HoleButton8: UIButton!
+    @IBOutlet weak var HoleButton9: UIButton!
+    @IBOutlet weak var HoleButton10: UIButton!
+    @IBOutlet weak var HoleButton11: UIButton!
+    @IBOutlet weak var HoleButton12: UIButton!
+    @IBOutlet weak var HoleButton13: UIButton!
+    @IBOutlet weak var HoleButton14: UIButton!
+    @IBOutlet weak var HoleButton15: UIButton!
+    @IBOutlet weak var HoleButton16: UIButton!
+    @IBOutlet weak var HoleButton17: UIButton!
+    @IBOutlet weak var HoleButton18: UIButton!
+    
+    @IBOutlet weak var LabelHeader: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.traitCollection.userInterfaceStyle == .dark{
+            let Image = UIImage(named: "Rectangle 20")
+            LabelHeader.textColor = UIColor.white
+            HoleButton1.setImage(Image, for: .normal)
+            HoleButton2.setImage(Image, for: .normal)
+            HoleButton3.setImage(Image, for: .normal)
+            HoleButton4.setImage(Image, for: .normal)
+            HoleButton5.setImage(Image, for: .normal)
+            HoleButton6.setImage(Image, for: .normal)
+            HoleButton7.setImage(Image, for: .normal)
+            HoleButton8.setImage(Image, for: .normal)
+            HoleButton9.setImage(Image, for: .normal)
+            HoleButton10.setImage(Image, for: .normal)
+            HoleButton11.setImage(Image, for: .normal)
+            HoleButton12.setImage(Image, for: .normal)
+            HoleButton13.setImage(Image, for: .normal)
+            HoleButton14.setImage(Image, for: .normal)
+            HoleButton15.setImage(Image, for: .normal)
+            HoleButton16.setImage(Image, for: .normal)
+            HoleButton17.setImage(Image, for: .normal)
+            HoleButton18.setImage(Image, for: .normal)
+        } else{
+            let Image = UIImage(named: "Rectangle 6")
+            LabelHeader.textColor = UIColor.systemGray3
+            HoleButton1.setImage(Image, for: .normal)
+            HoleButton2.setImage(Image, for: .normal)
+            HoleButton3.setImage(Image, for: .normal)
+            HoleButton4.setImage(Image, for: .normal)
+            HoleButton5.setImage(Image, for: .normal)
+            HoleButton6.setImage(Image, for: .normal)
+            HoleButton7.setImage(Image, for: .normal)
+            HoleButton8.setImage(Image, for: .normal)
+            HoleButton9.setImage(Image, for: .normal)
+            HoleButton10.setImage(Image, for: .normal)
+            HoleButton11.setImage(Image, for: .normal)
+            HoleButton12.setImage(Image, for: .normal)
+            HoleButton13.setImage(Image, for: .normal)
+            HoleButton14.setImage(Image, for: .normal)
+            HoleButton15.setImage(Image, for: .normal)
+            HoleButton16.setImage(Image, for: .normal)
+            HoleButton17.setImage(Image, for: .normal)
+            HoleButton18.setImage(Image, for: .normal)
+        }
+        
         for i in 0...17{
             holeLabelsOfPrevGame.par[i].text = String(prevGameInfo.Holes[i].par)
             holeLabelsOfPrevGame.HCP[i].text = String(prevGameInfo.Holes[i].HCP)

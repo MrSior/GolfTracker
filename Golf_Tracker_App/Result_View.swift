@@ -55,13 +55,15 @@ class Result_View: UIViewController {
         }
         if points >= 33 {
             resShotsLabel.textColor = UIColor.systemGreen
-            resPointLabel.text = "Ok";
-            resPointLabel.textColor = UIColor.systemGreen
+            resPointLabel.text = "OK";
+            resPointLabel.textColor = UIColor.systemYellow
             resHCPLabel.text = "⏤";
-            resHCPLabel.textColor = UIColor.systemGreen
+            resHCPLabel.textColor = UIColor.systemYellow
             if points > 36 {
                 resHCPLabel.text = "↓";
                 resHCPLabel.textColor = UIColor.systemGreen
+                resPointLabel.text = "Good";
+                resPointLabel.textColor = UIColor.systemGreen
             }
         } else{
             resShotsLabel.textColor = UIColor.red
@@ -75,7 +77,7 @@ class Result_View: UIViewController {
             resPutsLabel.text = "Bad"
             resPutsLabel.textColor = UIColor.red
         } else{
-            resPutsLabel.text = "Ok"
+            resPutsLabel.text = "Good"
             resPutsLabel.textColor = UIColor.systemGreen
         }
         
@@ -84,7 +86,7 @@ class Result_View: UIViewController {
             resGreenRegLabel.textColor = UIColor.systemGreen
         } else if greenRegSum > 18 - Current_game.handicap_points{
             resGreenRegLabel.text = "Good"
-            resGreenRegLabel.textColor = UIColor.systemGreen
+            resGreenRegLabel.textColor = UIColor.systemYellow
         } else{
             resGreenRegLabel.text = "Bad"
             resGreenRegLabel.textColor = UIColor.red
@@ -95,7 +97,7 @@ class Result_View: UIViewController {
             resUpDownsLabel.textColor = UIColor.systemGreen
         } else if upDownsSum > 18 - Current_game.handicap_points{
             resUpDownsLabel.text = "Good"
-            resUpDownsLabel.textColor = UIColor.systemGreen
+            resUpDownsLabel.textColor = UIColor.systemYellow
         } else{
             resUpDownsLabel.text = "Bad"
             resUpDownsLabel.textColor = UIColor.red
