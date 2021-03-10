@@ -196,6 +196,10 @@ class Result_View: UIViewController {
                     res += 4
                 } else if i.shots - fors == i.par + 1{
                     res += 1
+                } else if i.shots - fors == i.par - 3{
+                    res += 5
+                } else if i.shots - fors == i.par - 4{
+                    res += 6
                 }
             } else{
                 if i.HCP <= Current_game.handicap_points {
@@ -207,6 +211,10 @@ class Result_View: UIViewController {
                         res += 3
                     } else if i.shots - 1 == i.par - 2{
                         res += 4
+                    } else if i.shots - 1 == i.par - 3{
+                        res += 5
+                    } else if i.shots - 2 == i.par - 4{
+                        res += 6
                     }
                 } else{
                     if i.shots == i.par + 1{
@@ -217,6 +225,10 @@ class Result_View: UIViewController {
                         res += 3
                     } else if i.shots == i.par - 2{
                         res += 4
+                    } else if i.shots == i.par - 3{
+                        res += 5
+                    } else if i.shots == i.par - 4{
+                        res += 6
                     }
                 }
             }

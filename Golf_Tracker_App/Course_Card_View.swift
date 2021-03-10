@@ -146,59 +146,15 @@ class Course_Card_View: UIViewController {
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
             // Trait collection has already changed
     }
-    
+
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         // Trait collection will change. Use this one so you know what the state is changing to.
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if self.traitCollection.userInterfaceStyle == .dark {
-            // User Interface is Dark
-            HeaderLabel.textColor = UIColor.white
-            let Image = UIImage(named: "Rectangle 20")
-            Hole1button.setImage(Image, for: .normal)
-            Hole2button.setImage(Image, for: .normal)
-            Hole3button.setImage(Image, for: .normal)
-            Hole4button.setImage(Image, for: .normal)
-            Hole5button.setImage(Image, for: .normal)
-            Hole6button.setImage(Image, for: .normal)
-            Hole7button.setImage(Image, for: .normal)
-            Hole8button.setImage(Image, for: .normal)
-            Hole9button.setImage(Image, for: .normal)
-            Hole10button.setImage(Image, for: .normal)
-            Hole11button.setImage(Image, for: .normal)
-            Hole12button.setImage(Image, for: .normal)
-            Hole13button.setImage(Image, for: .normal)
-            Hole14button.setImage(Image, for: .normal)
-            Hole15button.setImage(Image, for: .normal)
-            Hole16button.setImage(Image, for: .normal)
-            Hole17button.setImage(Image, for: .normal)
-            Hole18button.setImage(Image, for: .normal)
-        } else {
-            // User Interface is Light
-            HeaderLabel.textColor = UIColor.systemGray3
-            let Image = UIImage(named: "Rectangle 6")
-            Hole1button.setImage(Image, for: .normal)
-            Hole2button.setImage(Image, for: .normal)
-            Hole3button.setImage(Image, for: .normal)
-            Hole4button.setImage(Image, for: .normal)
-            Hole5button.setImage(Image, for: .normal)
-            Hole6button.setImage(Image, for: .normal)
-            Hole7button.setImage(Image, for: .normal)
-            Hole8button.setImage(Image, for: .normal)
-            Hole9button.setImage(Image, for: .normal)
-            Hole10button.setImage(Image, for: .normal)
-            Hole11button.setImage(Image, for: .normal)
-            Hole12button.setImage(Image, for: .normal)
-            Hole13button.setImage(Image, for: .normal)
-            Hole14button.setImage(Image, for: .normal)
-            Hole15button.setImage(Image, for: .normal)
-            Hole16button.setImage(Image, for: .normal)
-            Hole17button.setImage(Image, for: .normal)
-            Hole18button.setImage(Image, for: .normal)
-        }
         
         self.navigationItem.setHidesBackButton(true, animated: true)
         //self.navigationItem.backButtonTitle = "Back"

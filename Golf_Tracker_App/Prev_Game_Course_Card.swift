@@ -45,50 +45,6 @@ class Prev_Game_Course_Card: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if self.traitCollection.userInterfaceStyle == .dark{
-            let Image = UIImage(named: "Rectangle 20")
-            LabelHeader.textColor = UIColor.white
-            HoleButton1.setImage(Image, for: .normal)
-            HoleButton2.setImage(Image, for: .normal)
-            HoleButton3.setImage(Image, for: .normal)
-            HoleButton4.setImage(Image, for: .normal)
-            HoleButton5.setImage(Image, for: .normal)
-            HoleButton6.setImage(Image, for: .normal)
-            HoleButton7.setImage(Image, for: .normal)
-            HoleButton8.setImage(Image, for: .normal)
-            HoleButton9.setImage(Image, for: .normal)
-            HoleButton10.setImage(Image, for: .normal)
-            HoleButton11.setImage(Image, for: .normal)
-            HoleButton12.setImage(Image, for: .normal)
-            HoleButton13.setImage(Image, for: .normal)
-            HoleButton14.setImage(Image, for: .normal)
-            HoleButton15.setImage(Image, for: .normal)
-            HoleButton16.setImage(Image, for: .normal)
-            HoleButton17.setImage(Image, for: .normal)
-            HoleButton18.setImage(Image, for: .normal)
-        } else{
-            let Image = UIImage(named: "Rectangle 6")
-            LabelHeader.textColor = UIColor.systemGray3
-            HoleButton1.setImage(Image, for: .normal)
-            HoleButton2.setImage(Image, for: .normal)
-            HoleButton3.setImage(Image, for: .normal)
-            HoleButton4.setImage(Image, for: .normal)
-            HoleButton5.setImage(Image, for: .normal)
-            HoleButton6.setImage(Image, for: .normal)
-            HoleButton7.setImage(Image, for: .normal)
-            HoleButton8.setImage(Image, for: .normal)
-            HoleButton9.setImage(Image, for: .normal)
-            HoleButton10.setImage(Image, for: .normal)
-            HoleButton11.setImage(Image, for: .normal)
-            HoleButton12.setImage(Image, for: .normal)
-            HoleButton13.setImage(Image, for: .normal)
-            HoleButton14.setImage(Image, for: .normal)
-            HoleButton15.setImage(Image, for: .normal)
-            HoleButton16.setImage(Image, for: .normal)
-            HoleButton17.setImage(Image, for: .normal)
-            HoleButton18.setImage(Image, for: .normal)
-        }
-        
         for i in 0...17{
             holeLabelsOfPrevGame.par[i].text = String(prevGameInfo.Holes[i].par)
             holeLabelsOfPrevGame.HCP[i].text = String(prevGameInfo.Holes[i].HCP)
