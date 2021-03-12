@@ -38,7 +38,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgV-zQ-4NS">
                                 <rect key="frame" x="65" y="541" width="310" height="43"/>
-                                <state key="normal" image="Previous Games Button 2v"/>
+                                <state key="normal" image="Previous Games Button"/>
                                 <connections>
                                     <segue destination="FDS-Rd-f6E" kind="show" id="V9Z-1b-6Yr"/>
                                 </connections>
@@ -48,20 +48,20 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyo-oN-RrO">
                                 <rect key="frame" x="65" y="601" width="310" height="44"/>
-                                <state key="normal" image="HCP Statistics Button 2v"/>
+                                <state key="normal" image="HCP Statistics Button"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-graph 2" translatesAutoresizingMaskIntoConstraints="NO" id="jAw-i0-F2I">
                                 <rect key="frame" x="16" y="598" width="47" height="47"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-xN-lpZ">
                                 <rect key="frame" x="67" y="661" width="307" height="43"/>
-                                <state key="normal" image="Start New Game Button 2v"/>
+                                <state key="normal" image="Start New Game Button"/>
                                 <connections>
                                     <segue destination="mLp-dW-ZLK" kind="show" id="RrJ-kz-p56"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="image 7" translatesAutoresizingMaskIntoConstraints="NO" id="KUk-Gp-fC0">
-                                <rect key="frame" x="16" y="661" width="50" height="37"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 7" translatesAutoresizingMaskIntoConstraints="NO" id="KUk-Gp-fC0">
+                                <rect key="frame" x="16" y="661" width="50" height="29"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Block Train2" translatesAutoresizingMaskIntoConstraints="NO" id="NO8-mk-4Ke">
                                 <rect key="frame" x="19" y="151" width="336" height="163"/>
@@ -92,28 +92,10 @@
                                 <rect key="frame" x="19" y="328" width="163" height="163"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+90" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmE-PD-Fhj">
-                                <rect key="frame" x="28" y="431" width="68.666666666666671" height="43"/>
+                                <rect key="frame" x="28" y="431" width="69" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                 <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVH-f3-j3F">
-                                <rect key="frame" x="76" y="549" width="145" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start new game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CB1-wd-ogv">
-                                <rect key="frame" x="76" y="669" width="144" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HCP Staticstics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAc-VW-zH6">
-                                <rect key="frame" x="76" y="610" width="142" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -127,8 +109,6 @@
                             <constraint firstItem="dgV-zQ-4NS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="401" id="4r2-Je-sMT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jAw-i0-F2I" secondAttribute="trailing" constant="312" id="7py-s1-Fbi"/>
                             <constraint firstItem="QcL-dm-Ir9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="217" id="9fh-8A-1V8"/>
-                            <constraint firstItem="HVH-f3-j3F" firstAttribute="leading" secondItem="5pH-wk-53n" secondAttribute="trailing" constant="21" id="CYX-ZT-Hee"/>
-                            <constraint firstItem="CAc-VW-zH6" firstAttribute="leading" secondItem="jAw-i0-F2I" secondAttribute="trailing" constant="13" id="Cd2-KB-v0m"/>
                             <constraint firstItem="jAw-i0-F2I" firstAttribute="top" secondItem="5pH-wk-53n" secondAttribute="bottom" constant="14" id="D87-Oe-9tR"/>
                             <constraint firstItem="Zyo-oN-RrO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="461" id="EIY-G4-ANb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pca-xN-lpZ" secondAttribute="trailing" constant="1" id="EUo-qC-reS"/>
@@ -142,14 +122,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KUk-Gp-fC0" secondAttribute="trailing" constant="309" id="Vce-K1-gA8"/>
                             <constraint firstItem="Pca-xN-lpZ" firstAttribute="leading" secondItem="KUk-Gp-fC0" secondAttribute="trailing" constant="1" id="WVs-tg-MBu"/>
                             <constraint firstItem="cJW-8t-5Zh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="Wfu-Np-cRt"/>
-                            <constraint firstItem="CAc-VW-zH6" firstAttribute="top" secondItem="HVH-f3-j3F" secondAttribute="bottom" constant="35" id="Xsh-st-RKf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jfq-zu-jL6" secondAttribute="trailing" constant="20" id="YdC-Bs-372"/>
                             <constraint firstItem="jAw-i0-F2I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Z6T-dM-DRi"/>
                             <constraint firstItem="Pca-xN-lpZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="521" id="apk-m1-Lv7"/>
                             <constraint firstItem="ahT-d5-4VP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="avi-cp-Fnb"/>
                             <constraint firstItem="Tco-P7-4F3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="cbv-kY-PWe"/>
-                            <constraint firstItem="CB1-wd-ogv" firstAttribute="top" secondItem="CAc-VW-zH6" secondAttribute="bottom" constant="33" id="dEV-cX-xuf"/>
-                            <constraint firstItem="CB1-wd-ogv" firstAttribute="leading" secondItem="KUk-Gp-fC0" secondAttribute="trailing" constant="10" id="djt-lM-J4A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5pH-wk-53n" secondAttribute="trailing" constant="320" id="em8-qn-V34"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cJW-8t-5Zh" secondAttribute="trailing" constant="193" id="f4H-b5-htN"/>
                             <constraint firstItem="dgV-zQ-4NS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="gBR-Kg-eyK"/>
@@ -165,7 +142,6 @@
                             <constraint firstItem="jAw-i0-F2I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="458" id="lVb-2Q-sRa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NO8-mk-4Ke" secondAttribute="trailing" constant="20" id="meT-CY-MoX"/>
                             <constraint firstItem="KUk-Gp-fC0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="r0o-O5-Wxr"/>
-                            <constraint firstItem="HVH-f3-j3F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="409" id="smZ-Sg-bn0"/>
                             <constraint firstItem="5pH-wk-53n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="400" id="u9i-kr-eUe"/>
                             <constraint firstItem="Tco-P7-4F3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="wEp-mQ-PRO"/>
                             <constraint firstItem="Zyo-oN-RrO" firstAttribute="top" secondItem="dgV-zQ-4NS" secondAttribute="bottom" constant="17" id="xAQ-9I-t7M"/>
@@ -175,6 +151,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Golf Data" id="TEz-im-SPs"/>
                     <connections>
+                        <outlet property="BestScoreImage" destination="cJW-8t-5Zh" id="rEq-ol-Stl"/>
+                        <outlet property="GolferImage" destination="Jba-jj-jxz" id="nLZ-pQ-Np1"/>
                         <outlet property="bestScoreLabel" destination="DmE-PD-Fhj" id="YER-NY-Mju"/>
                         <outlet property="isTrainLabel" destination="ahT-d5-4VP" id="OMv-Eg-Ljy"/>
                         <outlet property="isTrainLabel1" destination="Tco-P7-4F3" id="rIx-Wh-NFN"/>
@@ -229,9 +207,11 @@
                     <connections>
                         <outlet property="tableView" destination="5a7-pM-3KC" id="WMf-Ai-q8l"/>
                         <segue destination="fxE-hv-N1b" kind="show" identifier="toPreviousGameCourseCardSegue" id="kBY-Yt-Ex4"/>
+                        <segue destination="IwR-gs-xWp" kind="unwind" identifier="toMainPage" unwindAction="prepareForUnwindWithSegue:" id="gkY-wn-2xV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L47-bU-WWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="IwR-gs-xWp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="60" y="-1080.2955665024631"/>
         </scene>
@@ -1323,11 +1303,11 @@
         <image name="Block Active Game" width="163" height="163"/>
         <image name="Block Best Score" width="163" height="163"/>
         <image name="Block Train2" width="336" height="163"/>
-        <image name="HCP Statistics Button 2v" width="310" height="44"/>
+        <image name="HCP Statistics Button" width="310" height="44"/>
         <image name="Line 21" width="310" height="1"/>
-        <image name="Previous Games Button 2v" width="310" height="43"/>
+        <image name="Previous Games Button" width="310" height="43"/>
         <image name="Rectangle 6" width="54" height="47"/>
-        <image name="Start New Game Button 2v" width="307" height="43"/>
+        <image name="Start New Game Button" width="307" height="43"/>
         <image name="icons8-graph 2" width="40" height="40"/>
         <image name="image 3" width="451" height="1068"/>
         <image name="image 6" width="24" height="32"/>

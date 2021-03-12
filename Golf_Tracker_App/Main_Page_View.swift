@@ -15,9 +15,21 @@ class Main_Page_View: UIViewController {
     @IBOutlet weak var isTrainLabel2: UILabel!
     @IBOutlet weak var bestScoreLabel: UILabel!
     
+    @IBOutlet weak var BestScoreImage: UIImageView!
+    @IBOutlet weak var GolferImage: UIImageView!
+    
+    
+    var isFirstStart = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.view.frame.width == 428 && isFirstStart {
+            bestScoreLabel.frame.origin.x = bestScoreLabel.frame.origin.x + 25
+            GolferImage.frame.origin.x = GolferImage.frame.origin.x + 25
+            isFirstStart = false
+        }
+        
         isChanged = Array(repeating: Array(repeating: false, count: 7), count: 18);
         if Games.count == 0{
             bestScoreLabel.text = ""

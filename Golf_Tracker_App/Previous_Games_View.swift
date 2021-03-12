@@ -46,8 +46,17 @@ class Previous_Games_View: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //self.navigationItem.setHidesBackButton(true, animated: true)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if self.isMovingFromParent {
+            // Your code...
+            self.performSegue(withIdentifier: "toMainPage", sender: self)
+        }
     }
     
 
